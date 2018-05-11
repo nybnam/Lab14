@@ -3,21 +3,21 @@ import java.util.Scanner;
 
 public class Main {
 	
-	static void myTest(String str) throws MyException{
+	static void Test(String str) throws MyException{
 		if(str.equals("null"))
-			throw new MyException("String val is null");
+			throw new MyException("String val is null"); // if str is null, throw exception
 		else
-			System.out.println("String val is:" + str);
+			System.out.println("String val is:" + str); // print str's value
 	}
 	
 	public static void main(String[] args){
-		String str;
-		Scanner keyboard = new Scanner(System.in);
-		str = keyboard.nextLine();
+		String str;	// declare str
+		Scanner keyboard = new Scanner(System.in); // instantiate scanner
+		str = keyboard.nextLine();	// get input from keyboard
 		try{
-			myTest(str);
+			Test(str); // run test(string) method
 		} catch(MyException e){
-			System.out.println("Inside catch block: " + e);
+			System.out.println("Inside catch block: " + e); // print exception's detail
 		}
 	}
 }
