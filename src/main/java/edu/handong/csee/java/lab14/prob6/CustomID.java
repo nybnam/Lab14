@@ -45,7 +45,8 @@ public class CustomID {
 		System.out.println("Enter your race: "); // order input to user
 		Scanner keyboard = new Scanner(System.in); // instantiate scanner
 		race = keyboard.next(); // get string from keyboard
-		if(race != "Vulcan" && race != "Romulan" && race!= "Klingons"){
+		if((race.equalsIgnoreCase("Vulcan")) && (race.equalsIgnoreCase("Romulan")) && (race.equalsIgnoreCase("Vulcan"))){
+			System.out.println(race);
 			race = "null";// if user didn't set race from them, set race to null
 			throw new Exception("Human! Try again!"); // throw exception for try setting race again
 		}
@@ -53,6 +54,12 @@ public class CustomID {
 			System.out.println("Race is valid."); // print race is okay
 			System.out.println("Race: " + race);// print that input race successfully
 		}
+	}
+	
+	public void initialization(){
+		name = "null";
+		age = 0;
+		race = "null";
 	}
 		
 	

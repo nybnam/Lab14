@@ -1,13 +1,13 @@
 package edu.handong.csee.java.lab14.prob5;
 import java.util.Scanner;
 
-public class Main {
+public class MyExceptionMain {
 	
 	static void Test(String str) throws MyException{
 		if(str.equals("null"))
 			throw new MyException("String val is null"); // if str is null, throw exception
 		else
-			System.out.println("String val is:" + str); // print str's value
+			System.out.println("String val is: " + str); // print str's value
 	}
 	
 	public static void main(String[] args){
